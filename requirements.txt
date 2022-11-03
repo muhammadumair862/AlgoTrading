@@ -84,7 +84,7 @@ python-binance==1.0.16
 python-dateutil==2.8.2
 pytz==2022.6
 pytz-deprecation-shim==0.1.0.post0
-pywin32==304
+pywin32
 pywinpty==2.0.9
 pyzmq==24.0.1
 regex==2022.3.2
