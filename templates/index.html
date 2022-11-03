@@ -88,19 +88,20 @@ $(document).ready(function(){
 
           <div class="rsi box">
             <h5 class="text-dark">RSI Parameter</h5>
-            <input type="number" class="form-control" id="rsi" name="rsi" placeholder="RSI Period">
+            <input type="number" class="form-control" id="rsi" name="rsi" placeholder="RSI Period" value="14" required>
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
           <div class="ma box">
             <h5 class="text-dark">MA Parameter</h5>
-            <input type="number" class="form-control" id="ma_fast" name="ma_fast" placeholder="Fast Moving Period">
-            <input type="number" class="form-control" id="ma_slow" name="ma_slow" placeholder="Slow Moving Period">
+            <input type="number" class="form-control" id="ma_fast" name="ma_fast" placeholder="Fast Moving Period" value="26" required>
+            <input type="number" class="form-control" id="ma_slow" name="ma_slow" placeholder="Slow Moving Period" value="200" required>
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
           <div class="macd box">
             <h5 class="text-dark">MACD Parameter</h5>
-            <input type="number" class="form-control" id="macd" name="macd" placeholder="MACD Period">
-            <input type="number" class="form-control" id="macd_signal" name="macd_signal" placeholder="MACD Signal Period">
+            <input type="number" class="form-control" id="macd_fast" name="macd_fast" placeholder="MACD Fast Period" value="12" required>
+            <input type="number" class="form-control" id="macd_slow" name="macd_slow" placeholder="MACD Slow Period" value="26" required>
+            <input type="number" class="form-control" id="macd_signal" name="macd_signal" placeholder="MACD Signal Period" value="9" required>
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
           <input type="text" style="display: none;" class="form-control" id="symbol" name="symbol" value={{ticker}}>
