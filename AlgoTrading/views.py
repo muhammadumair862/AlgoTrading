@@ -26,6 +26,7 @@ def rsi_algo(data = None, period=14):
      size=100,
      size_type='value'
     )
+    
     fig=pf.plot(settings=dict(bm_returns=False))
 
     chart_fig = plot(fig, output_type='div')
@@ -105,6 +106,7 @@ def protfolio(request):
         symbol=request.POST['symbol']
         ticker = yf.Ticker(symbol)
         df=ticker.history(period=period)
+        df.index=df.index.strftime('%Y-%m-%d %H:%M:%S')
 
         def candlestic():
             fig=df.vbt.ohlcv.plot()
@@ -119,6 +121,7 @@ def protfolio(request):
                 result_chart,pf=rsi_algo(data=df)
             else:
                 result_chart,pf=rsi_algo(data=df,period=int(request.POST['rsi']))
+                
 
         elif request.POST['indicator_opt']=='macd':
             if request.POST['macd_fast']=='':
